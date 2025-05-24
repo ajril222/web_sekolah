@@ -30,7 +30,7 @@ body {
   align-items: center;
   padding: 10px 5%;
   background-color: transparent;
-  position: sticky;
+  position:relative;
   top: 0;
   z-index: 10;
 }
@@ -98,23 +98,25 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   padding: 20px;
   position: relative;
 }
 
 .computer-3d {
-  position: absolute;
-  right: 0;
-  width: 60%;
-  max-width: 600px;
-  height: auto;
+  z-index: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -15%;
+    width: 90%;
+    height: 90%;
 }
 
 .hero-text {
   font-size: 25px;
-  text-align: center;
+  text-align: left;
   max-width: 500px;
 }
 
@@ -233,6 +235,7 @@ body {
   .hero {
     flex-direction: column;
     padding-top: 60px;
+    justify-content: center;
   }
 
   .navigation {
